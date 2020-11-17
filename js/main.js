@@ -1,18 +1,5 @@
 ;(function () {
 
-	'use strict';
-	
-	$('body').on('click','.photos_modal',function(e){
-		e.preventDefault();
-		
-		let web = $(this).attr('data-image');
-		$('.modal-body').empty()
-						.append(`<img class="hvr-grow photo-modal img-responsive" src="images/${web}/img1.png">
-						        <img class="hvr-grow photo-modal img-responsive" src="images/${web}/img2.png">
-						        <img class="hvr-grow photo-modal img-responsive" src="images/${web}/img3.png">`);
-		$('#xmodal').modal('show');
-	});
-
 	$('.modal-body').on('click','.photo-modal',function(e){
 		openFullscreen(e.target);
 	});
@@ -50,7 +37,6 @@ $('.btn-learn').click(function(){
 
 ///////////////////////////////////////////////////
 
-
 	var isMobile = {
 		Android: function() {
 			return navigator.userAgent.match(/Android/i);
@@ -83,7 +69,6 @@ $('.btn-learn').click(function(){
 
 	};
 
-
 	var counter = function() {
 		$('.js-counter').countTo({
 			 formatter: function (value, options) {
@@ -91,7 +76,6 @@ $('.btn-learn').click(function(){
 	    },
 		});
 	};
-
 
 	var counterWayPoint = function() {
 		if ($('#colorlib-counter').length > 0 ) {
